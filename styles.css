@@ -403,7 +403,7 @@ footer {
         overflow-x: hidden;
         overflow-y: auto;
         height: 515px;
-        grid-template-rows: repeat(5, 40px);
+        grid-template-rows: repeat(5, 150px);
         grid-template-columns: 421px;
     }
 
