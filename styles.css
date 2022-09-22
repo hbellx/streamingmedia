@@ -6,43 +6,37 @@ body {
     width: 375px;
     margin: 0 auto;
     background-color: #ffffff;
-    font-family: 'Optima', Sans-serif;
-    color: #ffffff;
 }
 
 header {
     background-color:#030ABC;
-}
-
-header p {
-    font-family: 'raleway';
-    font-size: 20px;
-    line-height: 2em;
-    color: #ffffff;
+    height: 250px;
+    background-image: linear-gradient(to right, #030ABC, #01020d)
 }
 
 h1 {
+    padding-top: 70px;
+    padding-left: 10px;
     font-size: 20px;
+    color: #ffffff;
+}
+
+header p {
+    padding-left: 25px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     font-family: 'raleway';
-    font-weight: bold;
-    color: #ffffff;
-}
-
-h2 {
-    font-size: 20px;
-    color: #590242;
-}
-
-h3 {
     font-size: 16px;
+    line-height: 1.5em;
     color: #ffffff;
-    margin: 0 auto;
 }
 
 nav {
     width: 375px;
+    height: 50px;
     background-color: #030ABC;
     position: absolute;
+    padding-bottom: 20px;
     top: 0;
     z-index: 1;
     text-transform: uppercase;
@@ -92,7 +86,8 @@ a:hover, input:hover {
 label {
     cursor: pointer;
     display: inline-block;
-    padding: 28px 20px;
+    padding: 10px 20px;
+    margin-top: -10px;
     position: relative;
     user-select: none;
 }
@@ -111,6 +106,7 @@ label span:before, label span:after {
     content: '';
     display: block;
     height: 100%;
+    width: 100%;
     position: absolute;
     transition: all .2s ease-out;
 }
@@ -164,7 +160,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 }
 
 #playlist p, #curated p {
-    font-family: 'raleway';
+    font-family: 'Raleway';
     font-size: 14px;
     color: #ffffff;
 }
@@ -177,7 +173,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 
 .scroll {
     display: grid;
-    grid-template-columns: repeat (5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -187,7 +183,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     position: relative;
 }
 
-.scroll div {
+ .scroll div {
     position: absolute;
     top: 251px;
     background-color: rgba(255,255,255,.75);
@@ -199,31 +195,26 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 dl {
     display: flex;
     color: #590242;
+    margin: 10px;
+    margin-top: -10px;
 }
 
 dt {
     font-family: 'Raleway';
-    font-weight: lighter;
-    font-style: italic;
     font-size: 16px;
+    font-style: italic;
 }
 
 dd {
-    font-family: 'Raleway';
-    font-size: 16px;
     margin-left: 10px;
 }
-
 audio {
     position: absolute;
     bottom: 150px;
     left: 5px;
 }
 
-.more {
-    font-family: 'Raleway';
-    font-weight: bold;
-    font-size: 14px;
+button {
     text-decoration: none;
     background-color: #590242;
     color: #ffffff;
@@ -235,7 +226,7 @@ audio {
     margin: 10px 0 30px 32px;
 }
 
-.more:hover {
+button:hover {
     background-color: #020659;
 }
 
@@ -250,7 +241,7 @@ audio::-webkit-media-controls-play-button {
 }
 
 audio::-webkit-media-controls-enclosure {
-    background-color: rgba (225,225,225,.5)
+    background-color: rgba(225,225,225,.5)
 }
 
 #trending ::-webkit-scrollbar {
@@ -287,8 +278,47 @@ audio::-webkit-media-controls-enclosure {
     background: #ffffff;
 }
 
-#trending h3, #trending dl {
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-size: 20px;
     color: #590242;
+    line-height: 2em;
+    padding-left: 10px;
+}
+
+h2 {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+h3 {
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+#playlists h3, #curated h3 {
+    color: #ffffff;
+    text-align: center;
+    line-height: 1em;
+    padding: 5px;
+}
+
+#playlists p,  #curated p {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Raleway';
+    padding: 5px;
+
 }
 
 footer {
@@ -301,14 +331,86 @@ footer {
 }
 
 @media screen and (min-width:834px) {
+    body {
+        width: 843px;
+    }
+    nav {
+        width: 843px;
+        margin: 0 auto;
+    }
+    [href="#muzakmaker"] {
+        left: 0px;
+        font-size: 27px;
+    }
+    header {
+        height: 200px;
+    }
+    header p {
+        margin-right: 10px;
+    }
+
     ul {
         overflow: visible;
         position: absolute;
         top: 0;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center;
     }
     label span, input {
         display: none;
     }
+    
+    .Align {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: row;
+    }
+
+    #trending {
+        width: 843px;
+    }
+
+    #playlists {
+        width: 420px;
+        margin-top: 50px;
+    }
+
+    #curated {
+        width: 420px;
+        margin-top: 50px;
+    }
+
+    #playlists section, #curated section {
+        height: 120px;
+        width: 400px;
+    }
+
+    #playlists img, #curated img {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    #playlists p, #curated p {
+        position: absolute;
+        top: 27px;
+        left: 170px;
+        padding-right: 30px;
+    }
+
+    #playlists .scroll, #curated .scroll {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 515px;
+        grid-template-rows: repeat(5, 40px);
+        grid-template-columns: 421px;
+    }
+
+    button {
+        float: right;
+        margin: 20px 32px 30px 0;
+    }
+
+    
 }
